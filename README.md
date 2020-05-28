@@ -54,9 +54,14 @@ The whole system adopts the separation of front and back ends, in which the fron
 ## Quickly Start
 
 - Clone
+```bash
+wget https://dl.google.com/go/go1.14.3.linux-amd64.tar.gz
+tar -C /usr/local/ -zxvf go1.14.3.linux-amd64.tar.gz
+echo 'export PATH=$PATH:/usr/local/go/bin' > /etc/profile.d/go.sh
+```
 
 ```bash
-$ go get github.com/Qihoo360/wayne
+$ go get github.com/aaawoyucheng/wayne
 ```
 
 - Start Wayne
