@@ -5,8 +5,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Qihoo360/wayne/src/backend/common"
-	"github.com/Qihoo360/wayne/src/backend/models"
+	"github.com/aaawoyucheng/wayne/src/backend/common"
+	"github.com/aaawoyucheng/wayne/src/backend/models"
 )
 
 // GenericDataCell describes the interface of the data cell that contains all the necessary methods needed to perform

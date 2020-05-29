@@ -7,7 +7,7 @@ import (
 	autoscalingv1 "k8s.io/client-go/listers/autoscaling/v1"
 	"k8s.io/client-go/listers/core/v1"
 
-	"github.com/Qihoo360/wayne/src/backend/client/api"
+	"github.com/aaawoyucheng/wayne/src/backend/client/api"
 )
 
 type CacheFactory struct {

@@ -10,13 +10,13 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/client-go/kubernetes"
 
-	"github.com/Qihoo360/wayne/src/backend/client"
-	"github.com/Qihoo360/wayne/src/backend/client/api"
-	"github.com/Qihoo360/wayne/src/backend/common"
-	resourcescommon "github.com/Qihoo360/wayne/src/backend/resources/common"
-	"github.com/Qihoo360/wayne/src/backend/resources/dataselector"
-	"github.com/Qihoo360/wayne/src/backend/resources/event"
-	"github.com/Qihoo360/wayne/src/backend/resources/pod"
+	"github.com/aaawoyucheng/wayne/src/backend/client"
+	"github.com/aaawoyucheng/wayne/src/backend/client/api"
+	"github.com/aaawoyucheng/wayne/src/backend/common"
+	resourcescommon "github.com/aaawoyucheng/wayne/src/backend/resources/common"
+	"github.com/aaawoyucheng/wayne/src/backend/resources/dataselector"
+	"github.com/aaawoyucheng/wayne/src/backend/resources/event"
+	"github.com/aaawoyucheng/wayne/src/backend/resources/pod"
 )
 
 func GetRelatedJobByCronJob(kubeClient client.ResourceHandler, namespace, cronJob string, q *common.QueryParam) (*common.Page, error) {

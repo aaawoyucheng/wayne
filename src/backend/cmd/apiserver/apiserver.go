@@ -5,9 +5,9 @@ import (
 	"github.com/astaxie/beego"
 	"github.com/spf13/cobra"
 
-	"github.com/Qihoo360/wayne/src/backend/initial"
-	_ "github.com/Qihoo360/wayne/src/backend/routers"
-	"github.com/Qihoo360/wayne/src/backend/workers/webhook"
+	"github.com/aaawoyucheng/wayne/src/backend/initial"
+	_ "github.com/aaawoyucheng/wayne/src/backend/routers"
+	"github.com/aaawoyucheng/wayne/src/backend/workers/webhook"
 )
 
 var (

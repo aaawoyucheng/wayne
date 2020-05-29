@@ -11,15 +11,15 @@ import (
 	"github.com/go-sql-driver/mysql"
 	_ "github.com/go-sql-driver/mysql"
 
-	"github.com/Qihoo360/wayne/src/backend/database/initial"
-	"github.com/Qihoo360/wayne/src/backend/util/logs"
+	"github.com/aaawoyucheng/wayne/src/backend/database/initial"
+	"github.com/aaawoyucheng/wayne/src/backend/util/logs"
 )
 
 const DbDriverName = "mysql"
 
 func InitDb() {
 	orm.RegisterDriver(DbDriverName, orm.DRMySQL)
-
+	fmt.Print(beego.AppConfig)
 	// ensure database exist
 	err := ensureDatabase()
 	if err != nil {

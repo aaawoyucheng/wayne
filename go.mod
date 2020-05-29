@@ -4,10 +4,8 @@ go 1.12
 
 require (
 	github.com/360yun/sockjs-go v0.0.0-20190620042557-e70edfda8e57
-	github.com/Azure/go-autorest v11.1.2+incompatible // indirect
-	github.com/astaxie/beego v1.11.1
+	github.com/astaxie/beego v1.12.1
 	github.com/certifi/gocertifi v0.0.0-20190410005359-59a85de7f35e // indirect
-	github.com/davecgh/go-spew v1.1.1
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/docker/spdystream v0.0.0-20181023171402-6480d4af844c // indirect
 	github.com/elazarl/goproxy v0.0.0-20190410145444-c548f45dcf1d // indirect
@@ -16,11 +14,12 @@ require (
 	github.com/go-sql-driver/mysql v1.4.1
 	github.com/golang/groupcache v0.0.0-20190129154638-5b532d6fd5ef // indirect
 	github.com/googleapis/gnostic v0.2.0 // indirect
+	github.com/igm/sockjs-go v2.0.1+incompatible // indirect
 	github.com/imdario/mergo v0.3.7 // indirect
 	github.com/mitchellh/mapstructure v1.1.2
-	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd
 	github.com/onsi/ginkgo v1.10.1
 	github.com/onsi/gomega v1.7.0
+	github.com/shiena/ansicolor v0.0.0-20151119151921-a422bbe96644 // indirect
 	github.com/spf13/cobra v0.0.5
 	github.com/streadway/amqp v0.0.0-20190404075320-75d898a42a94
 	golang.org/x/net v0.0.0-20191004110552-13f9640d40b9

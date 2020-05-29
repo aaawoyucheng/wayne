@@ -8,17 +8,17 @@ import (
 	"k8s.io/api/apps/v1beta1"
 	"k8s.io/apimachinery/pkg/labels"
 
-	"github.com/Qihoo360/wayne/src/backend/client"
-	"github.com/Qihoo360/wayne/src/backend/controllers/base"
-	"github.com/Qihoo360/wayne/src/backend/controllers/common"
-	"github.com/Qihoo360/wayne/src/backend/models"
-	"github.com/Qihoo360/wayne/src/backend/models/response"
-	"github.com/Qihoo360/wayne/src/backend/models/response/errors"
-	"github.com/Qihoo360/wayne/src/backend/resources/deployment"
-	"github.com/Qihoo360/wayne/src/backend/resources/namespace"
-	"github.com/Qihoo360/wayne/src/backend/util"
-	"github.com/Qihoo360/wayne/src/backend/util/logs"
-	"github.com/Qihoo360/wayne/src/backend/workers/webhook"
+	"github.com/aaawoyucheng/wayne/src/backend/client"
+	"github.com/aaawoyucheng/wayne/src/backend/controllers/base"
+	"github.com/aaawoyucheng/wayne/src/backend/controllers/common"
+	"github.com/aaawoyucheng/wayne/src/backend/models"
+	"github.com/aaawoyucheng/wayne/src/backend/models/response"
+	"github.com/aaawoyucheng/wayne/src/backend/models/response/errors"
+	"github.com/aaawoyucheng/wayne/src/backend/resources/deployment"
+	"github.com/aaawoyucheng/wayne/src/backend/resources/namespace"
+	"github.com/aaawoyucheng/wayne/src/backend/util"
+	"github.com/aaawoyucheng/wayne/src/backend/util/logs"
+	"github.com/aaawoyucheng/wayne/src/backend/workers/webhook"
 )
 
 type KubeDeploymentController struct {
@@ -283,13 +283,13 @@ func (c *KubeDeploymentController) UpdateScale() {
 	name := c.Ctx.Input.Param(":deployment")
 	cli := c.Client(cluster)
 
-     var replica Replica
-     err := json.Unmarshal(c.Ctx.Input.RequestBody, &replica)
-	 if err != nil {
+	var replica Replica
+	err := json.Unmarshal(c.Ctx.Input.RequestBody, &replica)
+	if err != nil {
 		logs.Error("Invalid param body.%v", err)
 		c.AbortBadRequestFormat("replica num")
-	 }
-	err=deployment.UpdateScale(cli,name,namespace,replica.Num)
+	}
+	err = deployment.UpdateScale(cli, name, namespace, replica.Num)
 	if err != nil {
 		logs.Info("Update scale for deployment (%s) by cluster (%s) error.%v", name, cluster, err)
 		c.HandleError(err)

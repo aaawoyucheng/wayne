@@ -7,7 +7,7 @@ import (
 	"github.com/astaxie/beego/logs"
 	v1 "k8s.io/api/core/v1"
 
-	"github.com/Qihoo360/wayne/src/backend/util/hack"
+	"github.com/aaawoyucheng/wayne/src/backend/util/hack"
 )
 
 type ClusterStatus int32

@@ -5,7 +5,7 @@ import (
 
 	"k8s.io/apimachinery/pkg/util/wait"
 
-	"github.com/Qihoo360/wayne/src/backend/client"
+	"github.com/aaawoyucheng/wayne/src/backend/client"
 )
 
 func InitClient() {

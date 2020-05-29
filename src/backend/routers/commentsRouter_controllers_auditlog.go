@@ -6,15 +6,15 @@ import (
 )
 
 func init() {
-	const AuditLogController = "github.com/Qihoo360/wayne/src/backend/controllers/auditlog:AuditLogController"
-    beego.GlobalControllerRouter[AuditLogController] = append(
-    	beego.GlobalControllerRouter[AuditLogController],
-        beego.ControllerComments{
-            Method: "List",
-            Router: `/`,
-            AllowHTTPMethods: []string{"get"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil,
-        })
+	const AuditLogController = "github.com/aaawoyucheng/wayne/src/backend/controllers/auditlog:AuditLogController"
+	beego.GlobalControllerRouter[AuditLogController] = append(
+		beego.GlobalControllerRouter[AuditLogController],
+		beego.ControllerComments{
+			Method:           "List",
+			Router:           `/`,
+			AllowHTTPMethods: []string{"get"},
+			MethodParams:     param.Make(),
+			Filters:          nil,
+			Params:           nil,
+		})
 }

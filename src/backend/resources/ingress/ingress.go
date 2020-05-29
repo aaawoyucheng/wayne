@@ -5,8 +5,8 @@ import (
 	"k8s.io/apimachinery/pkg/api/errors"
 	metaV1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
-	
-	"github.com/Qihoo360/wayne/src/backend/util/logs"
+
+	"github.com/aaawoyucheng/wayne/src/backend/util/logs"
 )
 
 func CreateOrUpdateIngress(c *kubernetes.Clientset, ingress *v1beta1.Ingress) (*Ingress, error) {
@@ -28,7 +28,7 @@ func CreateOrUpdateIngress(c *kubernetes.Clientset, ingress *v1beta1.Ingress) (*
 	old.Annotations = ingress.Annotations
 	old.Spec = ingress.Spec
 	logs.Info("new ingress", old)
-	
+
 	kubeIngress, err := c.ExtensionsV1beta1().Ingresses(ingress.Namespace).Update(old)
 	if err != nil {
 		return nil, err

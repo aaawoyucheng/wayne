@@ -11,14 +11,14 @@ import (
 	"k8s.io/api/apps/v1beta1"
 	v1 "k8s.io/api/core/v1"
 
-	"github.com/Qihoo360/wayne/src/backend/client"
-	"github.com/Qihoo360/wayne/src/backend/controllers/common"
-	"github.com/Qihoo360/wayne/src/backend/models"
-	"github.com/Qihoo360/wayne/src/backend/models/response"
-	resdeployment "github.com/Qihoo360/wayne/src/backend/resources/deployment"
-	"github.com/Qihoo360/wayne/src/backend/resources/pod"
-	"github.com/Qihoo360/wayne/src/backend/util/hack"
-	"github.com/Qihoo360/wayne/src/backend/util/logs"
+	"github.com/aaawoyucheng/wayne/src/backend/client"
+	"github.com/aaawoyucheng/wayne/src/backend/controllers/common"
+	"github.com/aaawoyucheng/wayne/src/backend/models"
+	"github.com/aaawoyucheng/wayne/src/backend/models/response"
+	resdeployment "github.com/aaawoyucheng/wayne/src/backend/resources/deployment"
+	"github.com/aaawoyucheng/wayne/src/backend/resources/pod"
+	"github.com/aaawoyucheng/wayne/src/backend/util/hack"
+	"github.com/aaawoyucheng/wayne/src/backend/util/logs"
 )
 
 type DeploymentInfo struct {

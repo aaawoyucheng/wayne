@@ -6,8 +6,8 @@ import (
 	metaV1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
 
-	"github.com/Qihoo360/wayne/src/backend/resources/common"
-	"github.com/Qihoo360/wayne/src/backend/util/maps"
+	"github.com/aaawoyucheng/wayne/src/backend/resources/common"
+	"github.com/aaawoyucheng/wayne/src/backend/util/maps"
 )
 
 type Cronjob struct {

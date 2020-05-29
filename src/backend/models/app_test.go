@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/Qihoo360/wayne/src/backend/common"
-	"github.com/Qihoo360/wayne/src/backend/models"
+	"github.com/aaawoyucheng/wayne/src/backend/common"
+	"github.com/aaawoyucheng/wayne/src/backend/models"
 )
 
 func TestListApp(t *testing.T) {

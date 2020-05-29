@@ -5,10 +5,10 @@ import (
 
 	"k8s.io/apimachinery/pkg/runtime"
 
-	"github.com/Qihoo360/wayne/src/backend/controllers/base"
-	"github.com/Qihoo360/wayne/src/backend/models"
-	"github.com/Qihoo360/wayne/src/backend/resources/crd"
-	"github.com/Qihoo360/wayne/src/backend/util/logs"
+	"github.com/aaawoyucheng/wayne/src/backend/controllers/base"
+	"github.com/aaawoyucheng/wayne/src/backend/models"
+	"github.com/aaawoyucheng/wayne/src/backend/resources/crd"
+	"github.com/aaawoyucheng/wayne/src/backend/util/logs"
 )
 
 type KubeCustomCRDController struct {

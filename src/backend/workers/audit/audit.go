@@ -7,12 +7,12 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/Qihoo360/wayne/src/backend/bus"
-	"github.com/Qihoo360/wayne/src/backend/bus/message"
-	"github.com/Qihoo360/wayne/src/backend/controllers/openapi"
-	"github.com/Qihoo360/wayne/src/backend/models"
-	"github.com/Qihoo360/wayne/src/backend/util/logs"
-	"github.com/Qihoo360/wayne/src/backend/workers"
+	"github.com/aaawoyucheng/wayne/src/backend/bus"
+	"github.com/aaawoyucheng/wayne/src/backend/bus/message"
+	"github.com/aaawoyucheng/wayne/src/backend/controllers/openapi"
+	"github.com/aaawoyucheng/wayne/src/backend/models"
+	"github.com/aaawoyucheng/wayne/src/backend/util/logs"
+	"github.com/aaawoyucheng/wayne/src/backend/workers"
 )
 
 const QueueAudit = "audit"

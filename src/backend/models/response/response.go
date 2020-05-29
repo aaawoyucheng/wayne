@@ -3,7 +3,7 @@ package response
 import (
 	"time"
 
-	"github.com/Qihoo360/wayne/src/backend/models"
+	"github.com/aaawoyucheng/wayne/src/backend/models"
 )
 
 // for getnames api

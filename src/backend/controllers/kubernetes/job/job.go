@@ -3,10 +3,10 @@ package job
 import (
 	batchv1 "k8s.io/api/batch/v1"
 
-	"github.com/Qihoo360/wayne/src/backend/controllers/base"
-	"github.com/Qihoo360/wayne/src/backend/models"
-	"github.com/Qihoo360/wayne/src/backend/resources/job"
-	"github.com/Qihoo360/wayne/src/backend/util/logs"
+	"github.com/aaawoyucheng/wayne/src/backend/controllers/base"
+	"github.com/aaawoyucheng/wayne/src/backend/models"
+	"github.com/aaawoyucheng/wayne/src/backend/resources/job"
+	"github.com/aaawoyucheng/wayne/src/backend/util/logs"
 )
 
 type KubeJobController struct {

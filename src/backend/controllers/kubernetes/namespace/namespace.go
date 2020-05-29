@@ -8,15 +8,15 @@ import (
 	"k8s.io/apimachinery/pkg/labels"
 	utilerrors "k8s.io/apimachinery/pkg/util/errors"
 
-	"github.com/Qihoo360/wayne/src/backend/client"
-	"github.com/Qihoo360/wayne/src/backend/controllers/base"
-	"github.com/Qihoo360/wayne/src/backend/models"
-	"github.com/Qihoo360/wayne/src/backend/resources/common"
-	"github.com/Qihoo360/wayne/src/backend/resources/namespace"
-	"github.com/Qihoo360/wayne/src/backend/util"
-	"github.com/Qihoo360/wayne/src/backend/util/hack"
-	"github.com/Qihoo360/wayne/src/backend/util/logs"
-	"github.com/Qihoo360/wayne/src/backend/util/maps"
+	"github.com/aaawoyucheng/wayne/src/backend/client"
+	"github.com/aaawoyucheng/wayne/src/backend/controllers/base"
+	"github.com/aaawoyucheng/wayne/src/backend/models"
+	"github.com/aaawoyucheng/wayne/src/backend/resources/common"
+	"github.com/aaawoyucheng/wayne/src/backend/resources/namespace"
+	"github.com/aaawoyucheng/wayne/src/backend/util"
+	"github.com/aaawoyucheng/wayne/src/backend/util/hack"
+	"github.com/aaawoyucheng/wayne/src/backend/util/logs"
+	"github.com/aaawoyucheng/wayne/src/backend/util/maps"
 )
 
 type KubeNamespaceController struct {

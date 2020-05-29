@@ -7,7 +7,7 @@ import (
 	"github.com/astaxie/beego/orm"
 	"github.com/go-sql-driver/mysql"
 
-	"github.com/Qihoo360/wayne/src/backend/common"
+	"github.com/aaawoyucheng/wayne/src/backend/common"
 )
 
 const (
@@ -216,7 +216,7 @@ func (*appModel) GetByNameAndDeleted(name string, deleted bool) (a *App, err err
 func (*appModel) UpdateByNamespaceId(sourceId, targetId int64) (err error) {
 	var sql string
 	sql = "update " + TableNameApp + " set namespace_id=?, migrated=1 where namespace_id=?;"
-	args := [...]interface{} {
+	args := [...]interface{}{
 		targetId,
 		sourceId,
 	}

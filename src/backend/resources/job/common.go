@@ -3,7 +3,7 @@ package job
 import (
 	batchv1 "k8s.io/api/batch/v1"
 
-	"github.com/Qihoo360/wayne/src/backend/resources/dataselector"
+	"github.com/aaawoyucheng/wayne/src/backend/resources/dataselector"
 )
 
 // implements dataselector.DataCell

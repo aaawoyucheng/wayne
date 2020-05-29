@@ -8,9 +8,9 @@ import (
 
 	"github.com/streadway/amqp"
 
-	"github.com/Qihoo360/wayne/src/backend/bus"
-	"github.com/Qihoo360/wayne/src/backend/bus/message"
-	"github.com/Qihoo360/wayne/src/backend/util/logs"
+	"github.com/aaawoyucheng/wayne/src/backend/bus"
+	"github.com/aaawoyucheng/wayne/src/backend/bus/message"
+	"github.com/aaawoyucheng/wayne/src/backend/util/logs"
 )
 
 var (

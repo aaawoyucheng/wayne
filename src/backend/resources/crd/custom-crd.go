@@ -7,9 +7,9 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/client-go/kubernetes"
 
-	"github.com/Qihoo360/wayne/src/backend/common"
-	"github.com/Qihoo360/wayne/src/backend/resources/dataselector"
-	"github.com/Qihoo360/wayne/src/backend/util/logs"
+	"github.com/aaawoyucheng/wayne/src/backend/common"
+	"github.com/aaawoyucheng/wayne/src/backend/resources/dataselector"
+	"github.com/aaawoyucheng/wayne/src/backend/util/logs"
 )
 
 func GetCustomCRD(cli *kubernetes.Clientset, group, version, kind, namespace, name string) (runtime.Object, error) {

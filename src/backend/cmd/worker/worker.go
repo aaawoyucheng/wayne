@@ -13,12 +13,12 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/streadway/amqp"
 
-	"github.com/Qihoo360/wayne/src/backend/bus"
-	"github.com/Qihoo360/wayne/src/backend/initial"
-	"github.com/Qihoo360/wayne/src/backend/util/logs"
-	"github.com/Qihoo360/wayne/src/backend/workers"
-	"github.com/Qihoo360/wayne/src/backend/workers/audit"
-	"github.com/Qihoo360/wayne/src/backend/workers/webhook"
+	"github.com/aaawoyucheng/wayne/src/backend/bus"
+	"github.com/aaawoyucheng/wayne/src/backend/initial"
+	"github.com/aaawoyucheng/wayne/src/backend/util/logs"
+	"github.com/aaawoyucheng/wayne/src/backend/workers"
+	"github.com/aaawoyucheng/wayne/src/backend/workers/audit"
+	"github.com/aaawoyucheng/wayne/src/backend/workers/webhook"
 )
 
 var (

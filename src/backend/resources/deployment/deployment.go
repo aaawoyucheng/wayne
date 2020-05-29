@@ -11,13 +11,13 @@ import (
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/client-go/kubernetes"
 
-	"github.com/Qihoo360/wayne/src/backend/client"
-	"github.com/Qihoo360/wayne/src/backend/client/api"
-	erroresult "github.com/Qihoo360/wayne/src/backend/models/response/errors"
-	"github.com/Qihoo360/wayne/src/backend/resources/common"
-	"github.com/Qihoo360/wayne/src/backend/resources/event"
-	"github.com/Qihoo360/wayne/src/backend/resources/pod"
-	"github.com/Qihoo360/wayne/src/backend/util/maps"
+	"github.com/aaawoyucheng/wayne/src/backend/client"
+	"github.com/aaawoyucheng/wayne/src/backend/client/api"
+	erroresult "github.com/aaawoyucheng/wayne/src/backend/models/response/errors"
+	"github.com/aaawoyucheng/wayne/src/backend/resources/common"
+	"github.com/aaawoyucheng/wayne/src/backend/resources/event"
+	"github.com/aaawoyucheng/wayne/src/backend/resources/pod"
+	"github.com/aaawoyucheng/wayne/src/backend/util/maps"
 )
 
 type Deployment struct {
@@ -164,13 +164,13 @@ func DeleteDeployment(cli *kubernetes.Clientset, name, namespace string) error {
 		Delete(name, &metaV1.DeleteOptions{PropagationPolicy: &deletionPropagation})
 }
 
-func  UpdateScale(cli *kubernetes.Clientset, deploymentname string, namespace string,newreplica int32) error {
-	deployments:=cli.AppsV1beta1().Deployments(namespace)
-	deployment,err:=deployments.Get(deploymentname,metaV1.GetOptions{})
+func UpdateScale(cli *kubernetes.Clientset, deploymentname string, namespace string, newreplica int32) error {
+	deployments := cli.AppsV1beta1().Deployments(namespace)
+	deployment, err := deployments.Get(deploymentname, metaV1.GetOptions{})
 	if err != nil {
-		return  err
+		return err
 	}
-	deployment.Spec.Replicas=&newreplica
-	_,err=deployments.Update(deployment)
+	deployment.Spec.Replicas = &newreplica
+	_, err = deployments.Update(deployment)
 	return err
 }

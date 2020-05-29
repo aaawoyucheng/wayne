@@ -6,8 +6,8 @@ import (
 
 	"github.com/astaxie/beego/orm"
 
-	"github.com/Qihoo360/wayne/src/backend/common"
-	"github.com/Qihoo360/wayne/src/backend/util/logs"
+	"github.com/aaawoyucheng/wayne/src/backend/common"
+	"github.com/aaawoyucheng/wayne/src/backend/util/logs"
 )
 
 func GetTotal(queryTable interface{}, q *common.QueryParam) (int64, error) {

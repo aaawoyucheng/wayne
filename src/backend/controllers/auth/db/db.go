@@ -3,9 +3,9 @@ package db
 import (
 	"fmt"
 
-	"github.com/Qihoo360/wayne/src/backend/controllers/auth"
-	"github.com/Qihoo360/wayne/src/backend/models"
-	"github.com/Qihoo360/wayne/src/backend/util/encode"
+	"github.com/aaawoyucheng/wayne/src/backend/controllers/auth"
+	"github.com/aaawoyucheng/wayne/src/backend/models"
+	"github.com/aaawoyucheng/wayne/src/backend/util/encode"
 )
 
 type DBAuth struct{}

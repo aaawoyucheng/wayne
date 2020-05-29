@@ -6,8 +6,8 @@ import (
 	"k8s.io/api/core/v1"
 	"k8s.io/api/extensions/v1beta1"
 
-	"github.com/Qihoo360/wayne/src/backend/models"
-	"github.com/Qihoo360/wayne/src/backend/util"
+	"github.com/aaawoyucheng/wayne/src/backend/models"
+	"github.com/aaawoyucheng/wayne/src/backend/util"
 )
 
 func daemonSetPreDeploy(kubeDaemonSet *v1beta1.DaemonSet, daemonSet *models.DaemonSet,

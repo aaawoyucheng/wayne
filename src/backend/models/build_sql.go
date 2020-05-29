@@ -6,7 +6,7 @@ import (
 
 	"github.com/astaxie/beego/orm"
 
-	"github.com/Qihoo360/wayne/src/backend/util/snaker"
+	"github.com/aaawoyucheng/wayne/src/backend/util/snaker"
 )
 
 // mysql operators.

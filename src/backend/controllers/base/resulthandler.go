@@ -10,9 +10,9 @@ import (
 	"github.com/go-sql-driver/mysql"
 	"k8s.io/apimachinery/pkg/api/errors"
 
-	erroresult "github.com/Qihoo360/wayne/src/backend/models/response/errors"
-	"github.com/Qihoo360/wayne/src/backend/util/hack"
-	"github.com/Qihoo360/wayne/src/backend/util/logs"
+	erroresult "github.com/aaawoyucheng/wayne/src/backend/models/response/errors"
+	"github.com/aaawoyucheng/wayne/src/backend/util/hack"
+	"github.com/aaawoyucheng/wayne/src/backend/util/logs"
 )
 
 type ResultHandlerController struct {

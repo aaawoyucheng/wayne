@@ -13,9 +13,9 @@ import (
 	clientcmdlatest "k8s.io/client-go/tools/clientcmd/api/latest"
 	clientcmdapiv1 "k8s.io/client-go/tools/clientcmd/api/v1"
 
-	"github.com/Qihoo360/wayne/src/backend/models"
-	"github.com/Qihoo360/wayne/src/backend/util/logs"
-	"github.com/Qihoo360/wayne/src/backend/util/maps"
+	"github.com/aaawoyucheng/wayne/src/backend/models"
+	"github.com/aaawoyucheng/wayne/src/backend/util/logs"
+	"github.com/aaawoyucheng/wayne/src/backend/util/maps"
 )
 
 const (

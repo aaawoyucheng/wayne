@@ -3,7 +3,7 @@
 MAKEFLAGS += --warn-undefined-variables
 
 # Build variables
-REGISTRY_URI :=360cloud
+REGISTRY_URI :=aaawoyucheng
 RELEASE_VERSION :=$(shell git describe --always --tags)
 UI_BUILD_VERSION :=v1.0.2
 SERVER_BUILD_VERSION :=v1.0.2
@@ -56,4 +56,9 @@ push-image:
 	docker push $(REGISTRY_URI)/wayne-frontend:$(RELEASE_VERSION)
 	docker push $(REGISTRY_URI)/wayne-frontend:latest
 
-release: build-backend-image build-frontend-image push-image
+build-all: build-backend-image build-frontend-image dockercompose
+
+release: build-all push-image
+
+dockercompose:
+	sed "s/latest/$(RELEASE_VERSION)/g" docker-compose.templete>hack/docker-compose/docker-compose.yaml

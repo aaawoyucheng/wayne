@@ -5,10 +5,10 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/Qihoo360/wayne/src/backend/common"
-	"github.com/Qihoo360/wayne/src/backend/controllers/base"
-	"github.com/Qihoo360/wayne/src/backend/models"
-	"github.com/Qihoo360/wayne/src/backend/util/logs"
+	"github.com/aaawoyucheng/wayne/src/backend/common"
+	"github.com/aaawoyucheng/wayne/src/backend/controllers/base"
+	"github.com/aaawoyucheng/wayne/src/backend/models"
+	"github.com/aaawoyucheng/wayne/src/backend/util/logs"
 )
 
 type NamespaceController struct {
@@ -284,17 +284,15 @@ func (c *NamespaceController) Migrate() {
 		c.AbortBadRequestFormat("NamespaceMigration.targetId")
 	}
 
-
 	// TODO 使用事务而不是分开更新
 	err = models.AppModel.UpdateByNamespaceId(nm.SourceId, nm.TargetId)
-	if err != nil{
+	if err != nil {
 		logs.Error("Error when updates app nsId. %v", err)
 		c.AbortInternalServerError("update app db error!")
 	}
 
-
 	err = models.NamespaceUserModel.UpdateByNamespaceId(nm.SourceId, nm.TargetId)
-	if err != nil{
+	if err != nil {
 		logs.Error("Error when updates nsUser nsId. %v", err)
 		c.AbortInternalServerError("update nsUser db error!")
 	}

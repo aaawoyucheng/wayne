@@ -10,13 +10,13 @@ import (
 	"github.com/dgrijalva/jwt-go"
 	"golang.org/x/oauth2"
 
-	rsakey "github.com/Qihoo360/wayne/src/backend/apikey"
-	"github.com/Qihoo360/wayne/src/backend/controllers/base"
-	"github.com/Qihoo360/wayne/src/backend/models"
-	"github.com/Qihoo360/wayne/src/backend/models/response/errors"
-	selfoauth "github.com/Qihoo360/wayne/src/backend/oauth2"
-	"github.com/Qihoo360/wayne/src/backend/util/hack"
-	"github.com/Qihoo360/wayne/src/backend/util/logs"
+	rsakey "github.com/aaawoyucheng/wayne/src/backend/apikey"
+	"github.com/aaawoyucheng/wayne/src/backend/controllers/base"
+	"github.com/aaawoyucheng/wayne/src/backend/models"
+	"github.com/aaawoyucheng/wayne/src/backend/models/response/errors"
+	selfoauth "github.com/aaawoyucheng/wayne/src/backend/oauth2"
+	"github.com/aaawoyucheng/wayne/src/backend/util/hack"
+	"github.com/aaawoyucheng/wayne/src/backend/util/logs"
 )
 
 // Authenticator provides interface to authenticate user credentials.

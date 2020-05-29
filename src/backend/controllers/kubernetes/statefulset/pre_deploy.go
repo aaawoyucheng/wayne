@@ -6,8 +6,8 @@ import (
 	"k8s.io/api/apps/v1beta1"
 	"k8s.io/api/core/v1"
 
-	"github.com/Qihoo360/wayne/src/backend/models"
-	"github.com/Qihoo360/wayne/src/backend/util"
+	"github.com/aaawoyucheng/wayne/src/backend/models"
+	"github.com/aaawoyucheng/wayne/src/backend/util"
 )
 
 func statefulsetPreDeploy(kubeStatefulSet *v1beta1.StatefulSet, statefulSet *models.Statefulset,

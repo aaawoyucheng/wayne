@@ -3,8 +3,8 @@ package openapi
 import (
 	"net/http"
 
-	"github.com/Qihoo360/wayne/src/backend/models"
-	"github.com/Qihoo360/wayne/src/backend/models/response"
+	"github.com/aaawoyucheng/wayne/src/backend/models"
+	"github.com/aaawoyucheng/wayne/src/backend/models/response"
 )
 
 // resource info include app info and users info.

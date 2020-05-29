@@ -7,10 +7,10 @@ import (
 
 	"github.com/astaxie/beego"
 
-	"github.com/Qihoo360/wayne/src/backend/controllers/auth"
-	"github.com/Qihoo360/wayne/src/backend/models"
-	ldapUtils "github.com/Qihoo360/wayne/src/backend/util/ldap"
-	"github.com/Qihoo360/wayne/src/backend/util/logs"
+	"github.com/aaawoyucheng/wayne/src/backend/controllers/auth"
+	"github.com/aaawoyucheng/wayne/src/backend/models"
+	ldapUtils "github.com/aaawoyucheng/wayne/src/backend/util/ldap"
+	"github.com/aaawoyucheng/wayne/src/backend/util/logs"
 )
 
 type LDAPAuth struct{}

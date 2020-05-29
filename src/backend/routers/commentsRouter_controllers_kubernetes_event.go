@@ -6,15 +6,15 @@ import (
 )
 
 func init() {
-    const KubeEventController = "github.com/Qihoo360/wayne/src/backend/controllers/kubernetes/event:KubeEventController"
-    beego.GlobalControllerRouter[KubeEventController] = append(
-        beego.GlobalControllerRouter[KubeEventController],
-        beego.ControllerComments{
-            Method: "List",
-            Router: `/namespaces/:namespace/clusters/:cluster`,
-            AllowHTTPMethods: []string{"get"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil,
-        })
+	const KubeEventController = "github.com/aaawoyucheng/wayne/src/backend/controllers/kubernetes/event:KubeEventController"
+	beego.GlobalControllerRouter[KubeEventController] = append(
+		beego.GlobalControllerRouter[KubeEventController],
+		beego.ControllerComments{
+			Method:           "List",
+			Router:           `/namespaces/:namespace/clusters/:cluster`,
+			AllowHTTPMethods: []string{"get"},
+			MethodParams:     param.Make(),
+			Filters:          nil,
+			Params:           nil,
+		})
 }

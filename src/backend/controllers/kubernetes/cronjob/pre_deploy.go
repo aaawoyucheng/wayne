@@ -6,8 +6,8 @@ import (
 	batchv1beta1 "k8s.io/api/batch/v1beta1"
 	"k8s.io/api/core/v1"
 
-	"github.com/Qihoo360/wayne/src/backend/models"
-	"github.com/Qihoo360/wayne/src/backend/util"
+	"github.com/aaawoyucheng/wayne/src/backend/models"
+	"github.com/aaawoyucheng/wayne/src/backend/util"
 )
 
 func cronjobPreDeploy(kubeCronJob *batchv1beta1.CronJob, cronjob *models.Cronjob,

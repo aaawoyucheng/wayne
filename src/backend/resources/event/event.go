@@ -10,12 +10,12 @@ import (
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apimachinery/pkg/types"
 
-	"github.com/Qihoo360/wayne/src/backend/client"
-	"github.com/Qihoo360/wayne/src/backend/client/api"
-	basecommon "github.com/Qihoo360/wayne/src/backend/common"
-	"github.com/Qihoo360/wayne/src/backend/resources/common"
-	"github.com/Qihoo360/wayne/src/backend/resources/dataselector"
-	"github.com/Qihoo360/wayne/src/backend/util/slice"
+	"github.com/aaawoyucheng/wayne/src/backend/client"
+	"github.com/aaawoyucheng/wayne/src/backend/client/api"
+	basecommon "github.com/aaawoyucheng/wayne/src/backend/common"
+	"github.com/aaawoyucheng/wayne/src/backend/resources/common"
+	"github.com/aaawoyucheng/wayne/src/backend/resources/dataselector"
+	"github.com/aaawoyucheng/wayne/src/backend/util/slice"
 )
 
 // FailedReasonPartials  is an array of partial strings to correctly filter warning events.

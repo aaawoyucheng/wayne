@@ -1,8 +1,8 @@
 package endpoint
 
 import (
-	"github.com/Qihoo360/wayne/src/backend/client"
-	"github.com/Qihoo360/wayne/src/backend/resources/common"
+	"github.com/aaawoyucheng/wayne/src/backend/client"
+	"github.com/aaawoyucheng/wayne/src/backend/resources/common"
 
 	"k8s.io/api/core/v1"
 )

@@ -1,8 +1,8 @@
 package event
 
 import (
-	"github.com/Qihoo360/wayne/src/backend/resources/common"
-	"github.com/Qihoo360/wayne/src/backend/resources/dataselector"
+	"github.com/aaawoyucheng/wayne/src/backend/resources/common"
+	"github.com/aaawoyucheng/wayne/src/backend/resources/dataselector"
 )
 
 // implements dataselector.DataCell

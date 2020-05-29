@@ -4,7 +4,7 @@ import (
 	"errors"
 	"sync"
 
-	"github.com/Qihoo360/wayne/src/backend/bus/message"
+	"github.com/aaawoyucheng/wayne/src/backend/bus/message"
 )
 
 var UBus *Bus

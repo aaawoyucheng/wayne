@@ -3,7 +3,7 @@ package models_test
 import (
 	"testing"
 
-	"github.com/Qihoo360/wayne/src/backend/models"
+	"github.com/aaawoyucheng/wayne/src/backend/models"
 )
 
 func TestUpdateOrders(t *testing.T) {

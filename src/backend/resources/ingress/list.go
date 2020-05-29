@@ -3,7 +3,7 @@ package ingress
 import (
 	extensions "k8s.io/api/extensions/v1beta1"
 
-	"github.com/Qihoo360/wayne/src/backend/resources/common"
+	"github.com/aaawoyucheng/wayne/src/backend/resources/common"
 )
 
 type Ingress struct {
