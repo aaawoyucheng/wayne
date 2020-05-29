@@ -5,87 +5,75 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/Qihoo360/wayne/blob/master/LICENSE)
 [![Go Report Card](https://goreportcard.com/badge/github.com/Qihoo360/wayne)](https://goreportcard.com/report/github.com/Qihoo360/wayne)
 
-[English](https://github.com/Qihoo360/wayne/blob/master/README.md) | [中文](https://github.com/Qihoo360/wayne/blob/master/README-CN.md)
+> 命名起源：360 搜索私有云团队多数项目命名都来源于 DC 漫画的角色，Wayne 也不例外，[Wayne](https://en.wikipedia.org/wiki/Batman#Bruce_Wayne) 是声名显赫的超级英雄蝙蝠侠 Bruce Wayne 的名字。
 
-Wayne is a universal, web-based **[Kubernetes](https://kubernetes.io) multi-cluster management platform**. It reduces service access costs by visualizing Kubernetes object template editing.
-With a complete permission management system and adapting to multi-tenant scenarios, it is a **publish platform** suitable for enterprise-level clusters.
+![控制面板](http://360yun.org/wayne/images/dashboard-ui.png)
 
-Wayne has been serving [360 search](https://www.so.com/?src=wayne) on a large scale, carrying most of the online services, stably managing nearly a thousand applications, tens of thousands of containers, running for more than two years, withstood the test of production.
+## 演示
 
-> Why Named **Wayne**:Most of the projects developed by the team of 360 ​​Search Private Cloud are named after DC comics, and [Wayne](https://en.wikipedia.org/wiki/Batman#Bruce_Wayne) is no exception. "Wayne" is the name of the famous superhero, Batman Bruce Wayne.
-
-![Dashboard](http://360yun.org/wayne/images/dashboard-ui.png)
-
-## Demo
-
-[http://demo.360yun.org](http://demo.360yun.org)
+[http://demo.360yun.org](https://demo.360yun.org)
 
 ## Features
 
-- Permissions management based on RBAC (Role based access control): Users are associated with departments and projects through roles, and department roles allow operations department resources, and project roles allow operation of project resources, which is more suitable for multi-tenant scenarios.
-- Simplified the process of kubernetes object creation: Provides a basic Kubernetes object configuration file addition method, while supporting advanced mode to directly edit Json/Yaml files to create Kubernetes objects.
-- LDAP/OAuth 2.0/DB Multiple login mode support: Integrate enterprise-level LDAP login and DB login mode, and also enable OAuth2 login.
-- Support multi-cluster, multi-tenancy: You can manage multiple Kubernetes clusters at the same time, and add specific configurations to each other, making it easier for multi-cluster and multi-tenant management.
-- Provide a complete auditing module: Wayne provides a complete auditing module (really named audit) for each operation, tracking for operational history, and support for user-defined webhook.
-- Provide APIKey-based open interface calls: Users can apply for related APIKeys and manage their own departments and projects. Operation and maintenance personnel can also apply for global APIKey for global management of specific resources.
-- Keep a complete release history: Users can easily find any historical release, easily roll back, and update Kubernetes resources based on a specific historical version.
-- Complete resource reporting: Users can easily access reports and charts of resource usage and historical online frequency (days) and other basic data.
-- Provide a Web shell based on strict permission checking: Users can enter the published Pod through the Web shell to operate, with full permission verification.
-- Provide an in-site notification system: facilitates administrators to push clusters, service notifications, and troubleshooting reports.
+- 基于 RBAC（Role based access control）的权限管理：用户通过角色与部门和项目关联，拥有部门角色允许操作部门资源，拥有项目角色允许操作项目资源，更加适合多租户场景。
+- 简化 Kubernetes 对象创建：提供基础 Kubernetes 对象配置文件添加方式，同时支持高级模式直接编辑 Json/Yaml 文件创建 Kubernetes 对象。
+- LDAP/OAuth 2.0/DB 多种登录模式支持：集成企业级 LDAP 登录及 DB 登录模式，同时还可以实现 OAuth2 登录。
+- 支持多集群、多租户：可以同时管理多个 Kubernetes 集群，并针对性添加特定配置，更方便的多集群、多租户管理。
+- 提供完整审计模块：每次操作都会有完整的审计功能，追踪用于操作历史，同时支持用户自定义 webhook。
+- 提供基于 APIKey 的开放接口调用：用户可自主申请相关 APIKey 并管理自己的部门和项目，运维人员也可以申请全局 APIKey 进行特定资源的全局管理。
+- 保留完整的发布历史：用户可以便捷的找到任何一次历史发布，并可轻松进行回滚，以及基于特定历史版本更新 Kubernetes 资源。
+- 具备完善的资源报表：用户可以轻松获取各项目的资源使用占比和历史上线频次（天级）以及其他基础数据的报表和图表。
+- 提供基于严密权限校验的 Web shell：用户可以通过 Web shell 的形式进入发布的 Pod 进行操作，自带完整的权限校验。 
+- 提供站内通知系统：方便管理员推送集群、业务通知和故障处理报告等。
 
-## Architecture
+## 架构设计
 
-The whole system adopts the separation of front and back ends, in which the front end uses Angular framework for data interaction and display, and the Ace editor is used for Kubernetes resource template editing. The backend uses the Beego framework for data interface processing, Client-go to interact with Kubernetes, and data for MySQL storage.
-![Architecture](http://360yun.org/wayne/images/architecture.png)
+整体采用前后端分离的方案，其中前端采用 Angular 框架进行数据交互和展示，使用 Ace 编辑器进行 Kubernetes 资源模版编辑。后端采用 Beego 框架做数据接口处理，使用 Client-go 与 Kubernetes 进行交互，数据使用 MySQL 存储。
 
-## Component
+![架构图](http://360yun.org/wayne/images/architecture.png)
 
-- Web UI:Provide complete business development and platform operation and maintenance experience.
-- Worker:Extend a range of message queue-based features, such as auditing components such as Audit and Webhooks.
+## 组件
 
-## Dependence
+- Web UI: 提供完整的业务开发和平台运维功能体验。
+- Worker: 扩展一系列基于消息队列的功能，例如 Audit 和 Webhooks 等审计组件。
+
+## 项目依赖
 
 - Golang 1.12+ ([installation manual](https://golang.org/dl/))
 - Docker 17.05+ ([installation manual](https://docs.docker.com/install))
 - Bee ([installation manual](https://github.com/beego/bee))
-- Node.js v11+ and npm 6.5+ ([installation with nvm](https://github.com/creationix/nvm#usage))
-- MySQL 5.6+ (Most of the data is in MySQL.)
+- Node.js v11+ 和 npm 6.5+ ([installation with nvm](https://github.com/creationix/nvm#usage))
+- MySQL 5.6+ (Wayne 主要数据都存在 MySQL 中)
 
-## Quickly Start
+## 快速启动
 
-- Clone
+- 安装go
+
 ```bash
 wget https://dl.google.com/go/go1.14.3.linux-amd64.tar.gz
 tar -C /usr/local/ -zxvf go1.14.3.linux-amd64.tar.gz
 echo 'export PATH=$PATH:/usr/local/go/bin' > /etc/profile.d/go.sh
 ```
 
-```bash
-$ go get github.com/aaawoyucheng/wayne
-```
-
-- Start Wayne
-
-  Start server by docker-compose at Wayne project.
+- 克隆代码仓库
 
 ```bash
-$ docker-compose -f ./hack/docker-compose/docker-compose.yaml up
+go get github.com/aaawoyucheng/wayne
 ```
 
-With the above command, you can access the local Wayne from http://127.0.0.1:4200, the default administrator account admin:admin.
+- 启动服务
 
-> Note: After Wayne is started, you need to configure information such as cluster and Namespace for normal use. See details [Cluster Configuration](http://360yun.org/wayne/admin/cluster.html)
+  在 Wayne 的根目录下，通过 docker-compose 创建服务
 
-## Document
+```shell
+docker-compose -f ./hack/docker-compose/docker-compose.yaml up
+```
 
-- Refer [Wiki](http://360yun.org/wayne/)
+通过上述命令，您可以从通过 http://127.0.0.1:4200 访问本地 Wayne, 默认管理员账号 admin:admin。
 
-## Contact Us
+> 注意：项目启动后还需要配置集群和 Namespace 等信息才可正常使用。详见 [集群配置](https://360yun.org/wayne/admin/cluster.html)
 
-WeChat
+## 文档
 
-![WeChat](http://70data-net-static.smartgslb.com/upload/work/wechat.jpg)
+- 请参照 [Wiki](http://360yun.org/wayne/)
 
-Mail
-
-redefine-infra@360.cn
