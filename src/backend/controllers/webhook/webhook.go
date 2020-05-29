@@ -3,10 +3,10 @@ package webhook
 import (
 	"encoding/json"
 
-	"github.com/Qihoo360/wayne/src/backend/controllers/base"
-	"github.com/Qihoo360/wayne/src/backend/models"
-	"github.com/Qihoo360/wayne/src/backend/models/hookevent"
-	"github.com/Qihoo360/wayne/src/backend/util/logs"
+	"github.com/aaawoyucheng/wayne/src/backend/controllers/base"
+	"github.com/aaawoyucheng/wayne/src/backend/models"
+	"github.com/aaawoyucheng/wayne/src/backend/models/hookevent"
+	"github.com/aaawoyucheng/wayne/src/backend/util/logs"
 )
 
 type WebHookController struct {
