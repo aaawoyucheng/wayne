@@ -1,4 +1,4 @@
-module github.com/Qihoo360/wayne
+module github.com/aaawoyucheng/wayne
 
 go 1.12
 
